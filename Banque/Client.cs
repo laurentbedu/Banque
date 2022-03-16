@@ -43,7 +43,10 @@ namespace Banque
         public void RemoveCompte(string numero)
         {
             Compte compte = comptes.Find(item => item.Numero == numero);
-            comptes.Remove(compte);
+            if(compte != null)
+            {
+                comptes.Remove(compte);
+            }
         }
 
         

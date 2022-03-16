@@ -21,7 +21,7 @@ namespace Banque
                 {
                     titulaire.RemoveCompte(this.numero);
                     titulaire = value;
-                    value.AddCompte(this);
+                    titulaire.AddCompte(this);
                 }
             } 
         }
