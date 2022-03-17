@@ -41,9 +41,10 @@ namespace Banque
             }
         }
 
-        public void AddInterests(int days)
+        public void AddInterests(ushort days)
         {
-            //TODO ...
+            double amount = Solde * txInterets / 36500 * days;
+            Crediter(amount);
         }
 
 

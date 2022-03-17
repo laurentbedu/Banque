@@ -27,7 +27,7 @@ namespace Banque
                 }
             }
         }
-        public double Solde { get => solde; private set => solde = value; }
+        public double Solde { get => solde; protected set => solde = value; }
         public string Devise { get => devise; set => devise = value; }
         public string Numero { get => numero; }
 
@@ -47,9 +47,12 @@ namespace Banque
             solde = solde + montant;
         }
 
-        public void Debiter(double montant)
+        public virtual void Debiter(double montant)
         {
-            solde = solde - montant;
+            if(solde - montant >= 0)
+            {
+                solde = solde - montant;
+            }
         }
 
         public override string ToString()

@@ -22,8 +22,17 @@ namespace Banque
             //client2.RemoveCompte(cpte2);
             //client2.RemoveCompte(cpte2);
 
-            CompteCourant compteCourant = new CompteCourant();
+            //CompteCourant compteCourant = new CompteCourant();
+            //compteCourant.DecouvertMax = 100;
+            //compteCourant.Debiter(50);
+            //compteCourant.Debiter(100);
 
+            //CompteEpargne compteEpargne = new CompteEpargne();
+            //compteEpargne.Debiter(50);
+
+            Compte comptecourant2 = new CompteCourant();
+            ((CompteCourant)comptecourant2).DecouvertMax = 100;
+            comptecourant2.Debiter(50);
 
             //CompteEpargne livret = new CompteEpargne();
             //CompteEpargne ldd = new CompteEpargne(EpargneType.LDD);

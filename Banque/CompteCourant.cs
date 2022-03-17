@@ -10,6 +10,14 @@ namespace Banque
     {
         private double decouvertMax = 0;
 
-        
+        public double DecouvertMax { get => decouvertMax; set => decouvertMax = value; }
+
+        public override void Debiter(double montant)
+        {
+            if (Solde - montant >= -decouvertMax)
+            {
+                Solde = Solde - montant;
+            }
+        }
     }
 }
