@@ -13,12 +13,33 @@
   <Class Name="Banque.Client">
     <Position X="2.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAEIAAAICAAACCAIAAAACEAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAEIAAQICAAACCAIAAAACEAAAABAAA=</HashCode>
       <FileName>Client.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Field Name="comptes" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="Banque.CompteEpargne" Collapsed="true">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAQAAAAAAAAAAAAABAAAAAQAAAQAAAAA=</HashCode>
+      <FileName>CompteEpargne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Banque.CompteCourant" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompteCourant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Banque.EpargneType" Collapsed="true">
+    <Position X="9" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAQBAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompteEpargne.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
