@@ -12,16 +12,16 @@ namespace Banque
         private double solde = 0;
         private string devise = "€";
         private static int lastNumero = 0;
-        private readonly string numero;
+        protected string numero;
 
         public Client Titulaire { 
             get => titulaire; 
             set {
                 if (titulaire != value)
                 {
-                    titulaire.RemoveCompte(this.numero);
+                    titulaire?.RemoveCompte(this.numero);
                     titulaire = value;
-                    titulaire.AddCompte(this);
+                    titulaire?.AddCompte(this);
                 }
             } 
         }
@@ -52,7 +52,7 @@ namespace Banque
 
         public override string ToString()
         {
-            return "Compte N°" + numero + " en " + devise + "Solde : " + solde + "€";
+            return "Compte N°" + numero + " en " + devise + " Solde : " + solde + "€";
         }
 
         
