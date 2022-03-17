@@ -8,22 +8,24 @@ namespace Banque
 {
     internal class Compte
     {
-        private Client titulaire;
+        private Client? titulaire;
         private double solde = 0;
         private string devise = "€";
         private static int lastNumero = 0;
         protected string numero;
 
-        public Client Titulaire { 
-            get => titulaire; 
-            set {
+        public Client? Titulaire
+        {
+            get => titulaire;
+            set
+            {
                 if (titulaire != value)
                 {
-                    titulaire?.RemoveCompte(this.numero);
+                    titulaire?.RemoveCompte(this);
                     titulaire = value;
                     titulaire?.AddCompte(this);
                 }
-            } 
+            }
         }
         public double Solde { get => solde; private set => solde = value; }
         public string Devise { get => devise; set => devise = value; }

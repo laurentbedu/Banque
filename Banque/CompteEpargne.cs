@@ -12,20 +12,26 @@ namespace Banque
         private EpargneType type;
 
         public double TxInterets { get => txInterets;}
-        internal EpargneType Type { get => type;}
+        public EpargneType Type { get => type;}
 
         public CompteEpargne() : base()
         {
             Initialize();
         }
 
-        public CompteEpargne(Client _titulaire, double _solde, EpargneType _type, string _devise = "€") : base(_titulaire, _solde, _devise)
+        public CompteEpargne(EpargneType _type) : base()
         {
-            Initialize();
+            Initialize(_type);
         }
 
-        private void Initialize()
+        public CompteEpargne(EpargneType _type, Client _titulaire, double _solde, string _devise = "€") : base(_titulaire, _solde, _devise)
         {
+            Initialize(_type);
+        }
+
+        private void Initialize(EpargneType _type = EpargneType.Livret)
+        {
+            type = _type;
             numero = type.ToString() + "_" + numero;
             switch (type)
             {
@@ -35,11 +41,16 @@ namespace Banque
             }
         }
 
+        public void AddInterests(int days)
+        {
+            //TODO ...
+        }
+
 
     }
 
     enum EpargneType
     {
-        Livret = 0, LDD, CEL
+        Livret, LDD, CEL
     }
 }

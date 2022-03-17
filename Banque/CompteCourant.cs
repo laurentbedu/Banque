@@ -8,6 +8,8 @@ namespace Banque
 {
     internal class CompteCourant : Compte
     {
-        private double decouvert = 0;
+        private double decouvertMax = 0;
+
+        
     }
 }

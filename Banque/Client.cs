@@ -47,10 +47,10 @@ namespace Banque
             }
         }
 
-        public void RemoveCompte(string numero)
+        public void RemoveCompte(Compte compte)
         {
-            Compte? compte = comptes.Find(item => item.Numero == numero);
-            if (compte != null)
+            //Compte? compte = comptes.Find(item => item.Numero == numero);
+            if (compte != null && comptes.Contains(compte))
             {
                 comptes.Remove(compte);
                 if (compte.Titulaire == this)
