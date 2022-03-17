@@ -37,18 +37,30 @@ namespace Banque
 
         public void AddCompte(Compte compte)
         {
-            comptes.Add(compte);
+            if (!comptes.Contains(compte))
+            {
+                comptes.Add(compte);
+            }
+            if (compte.Titulaire != this)
+            {
+                compte.Titulaire = this;
+            }
         }
 
         public void RemoveCompte(string numero)
         {
-            Compte compte = comptes.Find(item => item.Numero == numero);
-            if(compte != null)
+            Compte? compte = comptes.Find(item => item.Numero == numero);
+            if (compte != null)
             {
                 comptes.Remove(compte);
+                if (compte.Titulaire == this)
+                {
+                    compte.Titulaire = null;
+                }
             }
+
         }
 
-        
+
     }
 }
